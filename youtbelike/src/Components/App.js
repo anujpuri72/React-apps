@@ -27,7 +27,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="ui container" style={{ marginTop: "10px" }}>
         <SearchBaar onSearchSubmit={this.onSearchSubmit} />
         <VideoDetail video={this.state.selectedVideo} />
         <VideoList
