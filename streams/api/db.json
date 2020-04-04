@@ -1,0 +1,20 @@
+{
+  "streams": [
+    {
+      "title": "erefeede",
+      "description": "dceded\\",
+      "id": 1
+    },
+    {
+      "title": "2nd stream",
+      "description": "other stream",
+      "id": 2
+    },
+    {
+      "title": "new stream",
+      "description": "stream with userID",
+      "userId": "114165955152088311393",
+      "id": 3
+    }
+  ]
+}
