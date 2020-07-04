@@ -7,7 +7,9 @@ class PostList extends React.Component {
     this.props.fetchPostsandUsers();
   }
   renderedList() {
-    return this.props.posts.map(post => {
+    // console.log(this.props.posts);
+    // console.log(this.props.user);
+    return this.props.posts.map((post) => {
       return (
         <div className="item" key={post.id}>
           <i className="large middle aligned icon user" />
@@ -26,7 +28,7 @@ class PostList extends React.Component {
     return <div className="ui relaxed divided list">{this.renderedList()}</div>;
   }
 }
-const mapStateToProps = state => {
-  return { posts: state.posts };
+const mapStateToProps = (state) => {
+  return { posts: state.posts, user: state.user };
 };
 export default connect(mapStateToProps, { fetchPostsandUsers })(PostList);
