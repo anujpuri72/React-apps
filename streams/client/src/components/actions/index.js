@@ -13,6 +13,7 @@ export const SignOut = () => {
 };
 export const fetchStreams = () => async (dispatch) => {
   const response = await stream.get("./streams");
+  // console.log("1", response);
   dispatch({ type: "FETCH_STREAMS", payload: response.data });
 };
 export const fetchStream = (id) => async (dispatch) => {
@@ -21,7 +22,9 @@ export const fetchStream = (id) => async (dispatch) => {
 };
 export const createStream = (formValues) => async (dispatch, getState) => {
   const { userId } = getState().auth;
+  console.log("before",formValues)
   const response = await stream.post("./streams", { ...formValues, userId });
+  console.log("creating",response);
   dispatch({ type: "CREATE_STREAM", payload: response.data });
   history.push("/");
 };

@@ -8,9 +8,6 @@ class streamDelete extends React.Component {
   componentDidMount() {
     this.props.fetchStream(this.props.match.params.id);
   }
-  ondelete = (id) => {
-    this.props.deleteStream(id);
-  };
   actions() {
     return (
       <div className="actions">

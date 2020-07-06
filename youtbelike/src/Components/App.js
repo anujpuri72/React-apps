@@ -6,26 +6,26 @@ import VideoDetail from "./VideoDetail";
 class App extends React.Component {
   state = { videos: [], selectedVideo: null };
   componentDidMount() {
-    this.onSearchSubmit("oneplus 6t");
+    this.onSearchSubmit("");
   }
-  onSearchSubmit = async term => {
+  onSearchSubmit = async (term) => {
     const response = await youtube.get("/search", {
       params: {
         q: term,
         part: "snippet",
-        maxResults: 5,
-        key: "AIzaSyB43dbbY0glXNCjUhig4V9LAOIK7UiYnxU"
-      }
+        maxResults: 8,
+        key: "AIzaSyB43dbbY0glXNCjUhig4V9LAOIK7UiYnxU",
+      },
     });
     this.setState({
       videos: response.data.items,
-      selectedVideo: response.data.items[0]
+      selectedVideo: response.data.items[0],
     });
   };
-  onvideoSelect = video => {
+  onvideoSelect = (video) => {
     console.log("From the app", video);
     this.setState({
-      selectedVideo: video
+      selectedVideo: video,
     });
   };
 

@@ -49,6 +49,7 @@ class streamForm extends React.Component {
   }
 }
 const validate = (formvalues) => {
+  console.log("check",formvalues)
   const errors = {};
   if (!formvalues.title) errors.title = "You must enter a title";
   if (!formvalues.description)

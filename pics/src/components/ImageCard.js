@@ -7,8 +7,8 @@ class ImageCard extends React.Component {
     this.ImageRef = React.createRef();
   }
   componentDidMount() {
-    //   console.log(this.ImageRef);
-    //   console.log(this.ImageRef.current.clientHeight);
+    // console.log(this.ImageRef);
+    // console.log(this.ImageRef.current.clientHeight);
     this.ImageRef.current.addEventListener("load", this.setSpan);
   }
   setSpan = () => {

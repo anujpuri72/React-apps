@@ -7,7 +7,7 @@ import StreamForm from "./streamForm";
 class streamCreate extends React.Component {
   onSubmit = (formvalues) => {
     this.props.createStream(formvalues);
-    // console.log(formvalues);
+     console.log(formvalues);
   };
   render() {
     return (
