@@ -18,7 +18,14 @@ import useResources from "./userResource";
 
 //   render() {
 //     console.log(this.state.resources);
-//     return <div>{this.state.resources.length}</div>;
+//     return (
+//       <ul>
+//         {this.state.resources.map((resource) => (
+//           <li>{resource.title}</li>
+//         ))}
+//       </ul>
+//     );
+//     // return <div>{this.state.resources}</div>;
 //   }
 // }
 

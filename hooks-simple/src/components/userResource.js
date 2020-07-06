@@ -8,6 +8,7 @@ const useResources = (resource) => {
       .get(`https://jsonplaceholder.typicode.com/${resource}`)
       .then((response) => setResources(response.data));
   };
+  console.log(resources);
   useEffect(() => {
     fetchData(resource);
   }, [resource]);
